@@ -1,13 +1,15 @@
 package com.example.demo.Dao;
 
-import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 @Getter
 @Setter
 @ToString(exclude = {"email"},of = {"s","userName"})
+@EqualsAndHashCode(exclude = {"s"},of = {"userName"})
+/**
+ * 1. 可通过参数exclude排除一些属性
+ * 2. 可通过参数of指定仅使用哪些属性
+ * */
 public class User {
 //    @Getter(AccessLevel.PROTECTED)
 //    @Setter
